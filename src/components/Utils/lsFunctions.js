@@ -1,6 +1,16 @@
 const KEY = "installedApps";
 
-export const getInstalled = () => JSON.parse(localStorage.getItem(KEY) || "[]");
+export const getInstalled = () => {
+  try { 
+    return JSON.parse(localStorage.getItem(KEY) || "[]"); 
+
+  }
+  catch { 
+    return []; 
+}
+};
+
+export const isInstalled = (id) => getInstalled().some(a => a.id === id);
 
 export const installApp = (app) => {
   const list = getInstalled();
@@ -14,5 +24,3 @@ export const uninstallApp = (id) => {
   const next = getInstalled().filter(a => a.id !== id);
   localStorage.setItem(KEY, JSON.stringify(next));
 };
-
-export const isInstalled = (id) => getInstalled().some(a => a.id === id);

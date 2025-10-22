@@ -7,7 +7,7 @@ export default function Hero() {
   return (
     <section className="bg-transparent">
       <div className="container-default pt-14 pb-2 text-center">
-        {/* TITLE */}
+
         <h1 className="font-bold leading-tight tracking-tight
                        text-[34px] md:text-[56px] text-black flex flex-col">
           We Build{" "}
@@ -19,14 +19,14 @@ export default function Hero() {
           </span>
         </h1>
 
-        {/* SUBTEXT */}
+
         <p className="mt-3 max-w-2xl mx-auto text-slate-600">
           At <span className="font-semibold">HERO.IO</span>, we craft innovative apps
           designed to make everyday life simpler, smarter, and more exciting.
           Our goal is to turn your ideas into digital experiences that truly make an impact.
         </p>
 
-        {/* STORE BADGES */}
+
         <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4">
           <a
             href="https://play.google.com/store"
