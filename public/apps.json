@@ -1,0 +1,362 @@
+[
+  {
+    "image": "https://placehold.co/640x360?text=Neon+Drift",
+    "title": "Neon Drift",
+    "companyName": "Vector Forge",
+    "id": 1,
+    "description": "Arcade street-racing with synthwave vibes and reactive neon tracks.",
+    "size": 182,
+    "reviews": 6000,
+    "ratingAvg": 4.5,
+    "downloads": 1200456,
+    "ratings": [
+      { "name": "1 star", "count": 80 },
+      { "name": "2 star", "count": 140 },
+      { "name": "3 star", "count": 380 },
+      { "name": "4 star", "count": 1800 },
+      { "name": "5 star", "count": 3600 }
+    ]
+  },
+  {
+    "image": "https://placehold.co/640x360?text=Samurai+Sprint",
+    "title": "Samurai Sprint",
+    "companyName": "Kitsune Labs",
+    "id": 2,
+    "description": "Dash, parry, and slice through bamboo forests in a speedrunner roguelite.",
+    "size": 154,
+    "reviews": 5000,
+    "ratingAvg": 4.7,
+    "downloads": 980334,
+    "ratings": [
+      { "name": "1 star", "count": 20 },
+      { "name": "2 star", "count": 60 },
+      { "name": "3 star", "count": 120 },
+      { "name": "4 star", "count": 800 },
+      { "name": "5 star", "count": 4000 }
+    ]
+  },
+  {
+    "image": "https://placehold.co/640x360?text=Galaxy+Raiders",
+    "title": "Galaxy Raiders",
+    "companyName": "Starlance Interactive",
+    "id": 3,
+    "description": "Top-down space shooter with modular ships and co-op boss fights.",
+    "size": 209,
+    "reviews": 6000,
+    "ratingAvg": 4.1,
+    "downloads": 1750043,
+    "ratings": [
+      { "name": "1 star", "count": 200 },
+      { "name": "2 star", "count": 400 },
+      { "name": "3 star", "count": 900 },
+      { "name": "4 star", "count": 1800 },
+      { "name": "5 star", "count": 2700 }
+    ]
+  },
+  {
+    "image": "https://placehold.co/640x360?text=Dungeon+Chef",
+    "title": "Dungeon Chef",
+    "companyName": "Copper Pot Games",
+    "id": 4,
+    "description": "Hunt monsters, harvest ingredients, and run a fantasy tavern.",
+    "size": 137,
+    "reviews": 6000,
+    "ratingAvg": 3.8,
+    "downloads": 845221,
+    "ratings": [
+      { "name": "1 star", "count": 300 },
+      { "name": "2 star", "count": 600 },
+      { "name": "3 star", "count": 1200 },
+      { "name": "4 star", "count": 1800 },
+      { "name": "5 star", "count": 2100 }
+    ]
+  },
+  {
+    "image": "https://placehold.co/640x360?text=Pixel+Ninjas",
+    "title": "Pixel Ninjas",
+    "companyName": "BitBloom Studio",
+    "id": 5,
+    "description": "Retro stealth platformer with wall-runs and smoke-bomb puzzles.",
+    "size": 96,
+    "reviews": 5000,
+    "ratingAvg": 4.8,
+    "downloads": 1340056,
+    "ratings": [
+      { "name": "1 star", "count": 10 },
+      { "name": "2 star", "count": 20 },
+      { "name": "3 star", "count": 70 },
+      { "name": "4 star", "count": 600 },
+      { "name": "5 star", "count": 4300 }
+    ]
+  },
+  {
+    "image": "https://placehold.co/640x360?text=Turbo+Kart+Clash",
+    "title": "Turbo Kart Clash",
+    "companyName": "Oversteer Labs",
+    "id": 6,
+    "description": "Kart racing with wacky items, drifting physics, and online leagues.",
+    "size": 221,
+    "reviews": 12000,
+    "ratingAvg": 4.5,
+    "downloads": 2500399,
+    "ratings": [
+      { "name": "1 star", "count": 160 },
+      { "name": "2 star", "count": 280 },
+      { "name": "3 star", "count": 760 },
+      { "name": "4 star", "count": 3600 },
+      { "name": "5 star", "count": 7200 }
+    ]
+  },
+  {
+    "image": "https://placehold.co/640x360?text=Cyber+Archer",
+    "title": "Cyber Archer",
+    "companyName": "Photon Quiver",
+    "id": 7,
+    "description": "First-person bow combat in neon megacities with time-dilation shots.",
+    "size": 188,
+    "reviews": 5000,
+    "ratingAvg": 4.7,
+    "downloads": 910004,
+    "ratings": [
+      { "name": "1 star", "count": 20 },
+      { "name": "2 star", "count": 60 },
+      { "name": "3 star", "count": 120 },
+      { "name": "4 star", "count": 800 },
+      { "name": "5 star", "count": 4000 }
+    ]
+  },
+  {
+    "image": "https://placehold.co/640x360?text=Mecha+Arena",
+    "title": "Mecha Arena",
+    "companyName": "Iron Lotus",
+    "id": 8,
+    "description": "Team-based mech battles with customizable loadouts and destructible maps.",
+    "size": 312,
+    "reviews": 6000,
+    "ratingAvg": 4.1,
+    "downloads": 2100550,
+    "ratings": [
+      { "name": "1 star", "count": 200 },
+      { "name": "2 star", "count": 400 },
+      { "name": "3 star", "count": 900 },
+      { "name": "4 star", "count": 1800 },
+      { "name": "5 star", "count": 2700 }
+    ]
+  },
+  {
+    "image": "https://placehold.co/640x360?text=Shadow+Tactics+Mobile",
+    "title": "Shadow Tactics Mobile",
+    "companyName": "Silent Step Co.",
+    "id": 9,
+    "description": "Isometric stealth missions with synchronized takedowns and traps.",
+    "size": 143,
+    "reviews": 6000,
+    "ratingAvg": 4.5,
+    "downloads": 770112,
+    "ratings": [
+      { "name": "1 star", "count": 80 },
+      { "name": "2 star", "count": 140 },
+      { "name": "3 star", "count": 380 },
+      { "name": "4 star", "count": 1800 },
+      { "name": "5 star", "count": 3600 }
+    ]
+  },
+  {
+    "image": "https://placehold.co/640x360?text=Rune+Quest",
+    "title": "Rune Quest",
+    "companyName": "Mythic Mill",
+    "id": 10,
+    "description": "Craft runes, loot dungeons, and build synergies in an idle RPG.",
+    "size": 129,
+    "reviews": 5000,
+    "ratingAvg": 4.8,
+    "downloads": 1120344,
+    "ratings": [
+      { "name": "1 star", "count": 10 },
+      { "name": "2 star", "count": 20 },
+      { "name": "3 star", "count": 70 },
+      { "name": "4 star", "count": 600 },
+      { "name": "5 star", "count": 4300 }
+    ]
+  },
+  {
+    "image": "https://placehold.co/640x360?text=Skyline+Skaters",
+    "title": "Skyline Skaters",
+    "companyName": "Kickflip Works",
+    "id": 11,
+    "description": "Endless rooftop runner with tricks, grinds, and drone chases.",
+    "size": 101,
+    "reviews": 6000,
+    "ratingAvg": 3.8,
+    "downloads": 690778,
+    "ratings": [
+      { "name": "1 star", "count": 300 },
+      { "name": "2 star", "count": 600 },
+      { "name": "3 star", "count": 1200 },
+      { "name": "4 star", "count": 1800 },
+      { "name": "5 star", "count": 2100 }
+    ]
+  },
+  {
+    "image": "https://placehold.co/640x360?text=Arc+Knight",
+    "title": "Arc Knight",
+    "companyName": "Chromatic Blade",
+    "id": 12,
+    "description": "Action RPG with elemental combos and boss-rush gauntlets.",
+    "size": 247,
+    "reviews": 12000,
+    "ratingAvg": 4.7,
+    "downloads": 3050041,
+    "ratings": [
+      { "name": "1 star", "count": 48 },
+      { "name": "2 star", "count": 144 },
+      { "name": "3 star", "count": 288 },
+      { "name": "4 star", "count": 1920 },
+      { "name": "5 star", "count": 9600 }
+    ]
+  },
+  {
+    "image": "https://placehold.co/640x360?text=Crystal+Crawler",
+    "title": "Crystal Crawler",
+    "companyName": "Lumen Den",
+    "id": 13,
+    "description": "Turn-based dungeon crawler with procedurally generated crystal caverns.",
+    "size": 88,
+    "reviews": 6000,
+    "ratingAvg": 4.1,
+    "downloads": 540221,
+    "ratings": [
+      { "name": "1 star", "count": 200 },
+      { "name": "2 star", "count": 400 },
+      { "name": "3 star", "count": 900 },
+      { "name": "4 star", "count": 1800 },
+      { "name": "5 star", "count": 2700 }
+    ]
+  },
+  {
+    "image": "https://placehold.co/640x360?text=Rocket+Rumble",
+    "title": "Rocket Rumble",
+    "companyName": "Apogee Pocket",
+    "id": 14,
+    "description": "Physics-driven rocket league-style brawler with 3v3 online.",
+    "size": 199,
+    "reviews": 5000,
+    "ratingAvg": 4.7,
+    "downloads": 990553,
+    "ratings": [
+      { "name": "1 star", "count": 20 },
+      { "name": "2 star", "count": 60 },
+      { "name": "3 star", "count": 120 },
+      { "name": "4 star", "count": 800 },
+      { "name": "5 star", "count": 4000 }
+    ]
+  },
+  {
+    "image": "https://placehold.co/640x360?text=Meadow+Valley",
+    "title": "Meadow Valley",
+    "companyName": "Sprout & Co.",
+    "id": 15,
+    "description": "Cozy farm sim with seasons, festivals, and town relationships.",
+    "size": 171,
+    "reviews": 6000,
+    "ratingAvg": 4.5,
+    "downloads": 1500777,
+    "ratings": [
+      { "name": "1 star", "count": 80 },
+      { "name": "2 star", "count": 140 },
+      { "name": "3 star", "count": 380 },
+      { "name": "4 star", "count": 1800 },
+      { "name": "5 star", "count": 3600 }
+    ]
+  },
+  {
+    "image": "https://placehold.co/640x360?text=Quantum+Dash",
+    "title": "Quantum Dash",
+    "companyName": "Planck Play",
+    "id": 16,
+    "description": "Runner that lets you blink between timelines to avoid hazards.",
+    "size": 113,
+    "reviews": 5000,
+    "ratingAvg": 4.8,
+    "downloads": 800334,
+    "ratings": [
+      { "name": "1 star", "count": 10 },
+      { "name": "2 star", "count": 20 },
+      { "name": "3 star", "count": 70 },
+      { "name": "4 star", "count": 600 },
+      { "name": "5 star", "count": 4300 }
+    ]
+  },
+  {
+    "image": "https://placehold.co/640x360?text=Vanguard+Tactics",
+    "title": "Vanguard Tactics",
+    "companyName": "Hex & Helm",
+    "id": 17,
+    "description": "Hex-grid strategy with fog-of-war and hero skill trees.",
+    "size": 205,
+    "reviews": 12000,
+    "ratingAvg": 4.1,
+    "downloads": 1900049,
+    "ratings": [
+      { "name": "1 star", "count": 400 },
+      { "name": "2 star", "count": 800 },
+      { "name": "3 star", "count": 1800 },
+      { "name": "4 star", "count": 3600 },
+      { "name": "5 star", "count": 5400 }
+    ]
+  },
+  {
+    "image": "https://placehold.co/640x360?text=Rhythm+Reactor",
+    "title": "Rhythm Reactor",
+    "companyName": "Waveform Works",
+    "id": 18,
+    "description": "Beat-matching shooter where every reload lands on the downbeat.",
+    "size": 149,
+    "reviews": 6000,
+    "ratingAvg": 3.8,
+    "downloads": 720112,
+    "ratings": [
+      { "name": "1 star", "count": 300 },
+      { "name": "2 star", "count": 600 },
+      { "name": "3 star", "count": 1200 },
+      { "name": "4 star", "count": 1800 },
+      { "name": "5 star", "count": 2100 }
+    ]
+  },
+  {
+    "image": "https://placehold.co/640x360?text=Drift+Legends+Lite",
+    "title": "Drift Legends Lite",
+    "companyName": "Clutch Pixel",
+    "id": 19,
+    "description": "Casual drift racer with daily challenges and ghost replays.",
+    "size": 97,
+    "reviews": 5000,
+    "ratingAvg": 4.7,
+    "downloads": 1100032,
+    "ratings": [
+      { "name": "1 star", "count": 20 },
+      { "name": "2 star", "count": 60 },
+      { "name": "3 star", "count": 120 },
+      { "name": "4 star", "count": 800 },
+      { "name": "5 star", "count": 4000 }
+    ]
+  },
+  {
+    "image": "https://placehold.co/640x360?text=Battle+Blacksmith",
+    "title": "Battle Blacksmith",
+    "companyName": "Anvil Alley",
+    "id": 20,
+    "description": "Forge weapons in rhythm mini-games and sell to adventurers.",
+    "size": 126,
+    "reviews": 6000,
+    "ratingAvg": 4.5,
+    "downloads": 860009,
+    "ratings": [
+      { "name": "1 star", "count": 80 },
+      { "name": "2 star", "count": 140 },
+      { "name": "3 star", "count": 380 },
+      { "name": "4 star", "count": 1800 },
+      { "name": "5 star", "count": 3600 }
+    ]
+  }
+]
