@@ -1,10 +1,11 @@
 import { Link } from "react-router";
+import error404 from "../assets/error-404.png";
 
 export default function NotFound() {
   return (
     <div className="container-default py-20 text-center">
       <img
-        src="https://placehold.co/500x250?text=404"
+        src={error404}
         alt="404"
         className="mx-auto mb-6 rounded-xl"
       />
