@@ -21,7 +21,7 @@ export default function Hero() {
 
 
         <p className="mt-3 max-w-2xl mx-auto text-slate-600">
-          At <span className="font-semibold">HERO.IO</span>, we craft innovative apps
+          At <span className="font-semibold">My Hero Appamedia</span>, we craft innovative apps
           designed to make everyday life simpler, smarter, and more exciting.
           Our goal is to turn your ideas into digital experiences that truly make an impact.
         </p>
