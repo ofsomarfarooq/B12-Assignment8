@@ -1,13 +1,11 @@
 const KEY = "installedApps";
 
 export const getInstalled = () => {
-  try { 
-    return JSON.parse(localStorage.getItem(KEY) || "[]"); 
-
+  try {
+    return JSON.parse(localStorage.getItem(KEY) || "[]");
+  } catch {
+    return [];
   }
-  catch { 
-    return []; 
-}
 };
 
 export const isInstalled = (id) => getInstalled().some(a => a.id === id);

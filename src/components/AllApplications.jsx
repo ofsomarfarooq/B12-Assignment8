@@ -1,9 +1,16 @@
 import { useEffect, useMemo, useState } from "react";
 import { useNavigate } from "react-router";
 import useApplications from "./Hooks/useApplications";
+import Loader from "./AppCardLoading.jsx";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faDownload, faStar } from "@fortawesome/free-solid-svg-icons";
+
+
 
 
 const compact = (n) => Intl.NumberFormat("en", { notation: "compact" }).format(n);
+
+
 
 export default function AllApplications() {
   const { apps, loading } = useApplications();
@@ -36,8 +43,14 @@ export default function AllApplications() {
 
   if (loading) {
     return (
-      <main className="container-default py-16 text-center text-slate-500">
-        Loading apps…
+      <main className="container-default py-12">
+
+      <div className="text-center mb-10">
+        <h1 className="text-3xl md:text-4xl font-bold text-black">Our All Applications</h1>
+        <p className="text-slate-500">Explore all apps on the market developed by us.</p>
+      </div>
+      <Loader />
+
       </main>
     );
   }
@@ -78,27 +91,32 @@ export default function AllApplications() {
       )}
 
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 ">
         {filtered.map((app) => (
           <button
             key={app.id}
             onClick={() => nav(`/apps/${app.id}`)}
-            className="text-left border rounded-xl bg-white shadow-sm hover:shadow-md transition p-4"
+            className="text-left border-none rounded-xl bg-white shadow-sm hover:shadow-md transition p-4 hover:scale-105 transition-all duration-200 shadow-xl"
           >
             <img
-              src={app.image}
+              src={app.image || placeholder}
               alt={app.title}
               className="h-32 w-full object-contain mb-3"
-              onError={(e) => (e.currentTarget.src = "https://placehold.co/480x320?text=App")}
+              onError={(e) => {
+                e.currentTarget.onerror = null;
+                e.currentTarget.src = placeholder;
+              }}
             />
             <h3 className="font-semibold text-slate-800 mb-1 line-clamp-2">{app.title}</h3>
             <div className="flex items-center justify-between text-sm text-slate-600">
-              <span>📥 {compact(app.downloads)}</span>
-              <span>⭐ {app.ratingAvg}</span>
+              <span className="bg-green-100 text-green-400 "><FontAwesomeIcon icon={faDownload} /> {compact(app.downloads)}</span>
+              <span className="bg-yellow-100 text-yellow-400"><FontAwesomeIcon icon={faStar}  /> {app.ratingAvg}</span>
             </div>
           </button>
         ))}
       </div>
+
+      
     </main>
   );
 }

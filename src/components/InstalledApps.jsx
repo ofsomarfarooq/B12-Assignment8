@@ -1,14 +1,17 @@
 import { useEffect, useMemo, useState } from "react";
 import { useNavigate } from "react-router";
-import Swal from "sweetalert2";
 import { getInstalled, uninstallApp } from "./Utils/lsFunctions";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDownload, faStar, faDatabase } from "@fortawesome/free-solid-svg-icons";
+import useApplications from "./Hooks/useApplications";
+import Loader from "./installedAppLoader";
 
 export default function InstalledApps() {
   const [apps, setApps] = useState([]);
   const [sort, setSort] = useState("size"); 
   const nav = useNavigate();
+  const [toast, setToast] = useState(null);
+  const { loading } = useApplications();
 
   useEffect(() => {
     setApps(getInstalled());
@@ -24,17 +27,42 @@ export default function InstalledApps() {
   const handleUninstall = (id, title) => {
     uninstallApp(id);
     setApps(getInstalled());
-    Swal.fire({
-      title: "Uninstalled",
-      text: `${title} was removed from your device.`,
-      icon: "success",
-      timer: 1200,
-      showConfirmButton: false,
-    });
+    setToast({ text: `${title} uninstalled` });
+    setTimeout(() => setToast(null), 2000);
   };
+
+   if (loading) {
+    return (
+      <main className="container-default py-10">
+        <div className="text-center mb-8">
+        <h1 className="text-3xl font-bold">Your Installed Apps</h1>
+        <p className="text-slate-500">
+          Explore All Trending Apps on the Market developed by us
+        </p>
+      </div>
+
+      <Loader />
+      </main>
+    );
+  }
 
   return (
     <main className="container-default py-10">
+
+       {toast && (
+        <div className="fixed right-6 top-1/2 transform -translate-y-1/2 z-50 w-auto max-w-xs">
+          <div className="toast">
+            <div className="alert alert-error shadow-lg">
+              <div className="flex items-center gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" className="stroke-current flex-shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <span className="text-sm">{toast.text}</span>
+              </div>
+            </div>
+         </div>
+        </div>
+      )}
 
       <div className="text-center mb-8">
         <h1 className="text-3xl font-bold">Your Installed Apps</h1>
@@ -105,7 +133,7 @@ export default function InstalledApps() {
 
               <button
                 onClick={() => handleUninstall(app.id, app.title)}
-                className="btn btn-sm bg-[#2BD576] text-white hover:bg-[#26c36a]"
+                className="mt-5 btn btn-sm border-none bg-[#ff0000] text-white hover:bg-[#ff8000]"
               >
                 Uninstall
               </button>

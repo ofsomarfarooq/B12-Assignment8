@@ -27,7 +27,7 @@ export default function Navbar() {
 
         <div className="hidden md:block">
           <a href="https://github.com/Ofsomarfarooq" target="_blank" rel="noreferrer"
-             className="btn btn-primary bg-[#632EE3] text-white border-none">
+             className="btn btn-primary bg-[#632EE3] text-white border-none hover:scale-105 transition-all duration-300">
             <FontAwesomeIcon icon={faGithubAlt} className="mr-2" /> Contribute
           </a>
         </div>

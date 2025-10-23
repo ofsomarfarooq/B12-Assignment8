@@ -1,18 +1,20 @@
 import { useEffect, useMemo, useState } from "react";
 import { useParams, useNavigate } from "react-router";
-import Swal from "sweetalert2";
 import {BarChart,Bar,XAxis,YAxis,Tooltip,ResponsiveContainer,CartesianGrid}  from "recharts";
 import useApplications from "./Hooks/useApplications";
-import { getInstalled, installApp, isInstalled } from "./Utils/lsFunctions";
+import { installApp, isInstalled,uninstallApp } from "./Utils/lsFunctions";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDownload, faStar, faThumbsUp } from "@fortawesome/free-solid-svg-icons";
+
+import appError from "../assets/App-error.png";
 
 export default function AppDetailsPage() {
   const { id } = useParams();
   const nav = useNavigate();
   const { apps, loading } = useApplications();
   const [installed, setInstalled] = useState(false);
+  const [toast, setToast] = useState(null);
 
   const app = useMemo(() => apps.find((a) => String(a.id) === String(id)), [apps, id]);
 
@@ -31,6 +33,11 @@ export default function AppDetailsPage() {
   if (!app) {
     return (
       <div className="container-default py-20 text-center">
+        <img
+            src={appError}
+            alt="App Not Found"
+            className="mx-auto mb-6 rounded-xl"
+        />
         <h2 className="text-2xl font-bold mb-2">Opps!! App Not Found</h2>
         <p className="text-slate-600 mb-6">
           The App you are requesting is not found on our system. Please try another app.
@@ -46,26 +53,46 @@ export default function AppDetailsPage() {
     if (installed) return;
     installApp(app);
     setInstalled(true);
-    Swal.fire({
-      title: "Installed!",
-      text: `${app.title} has been installed successfully.`,
-      icon: "success",
-      timer: 1400,
-      showConfirmButton: false,
-    });
+    setToast({ text: `${app.title} installed` });
+    setTimeout(() => setToast(null), 2000);
   };
+
+   const handleUninstall = () => {
+      if (!installed) return;
+      uninstallApp(app.id);
+      setInstalled(false);
+      setToast({ text: `${app.title} uninstalled` });
+      setTimeout(() => setToast(null), 2000);
+   };
 
   return (
     <main className="container-default py-10">
 
+      {toast && (
+          <div className="fixed right-6 top-1/2 transform -translate-y-1/2 z-50 w-auto max-w-xs">
+            <div className="toast">
+              <div className={`alert ${installed ? "alert-success" : "alert-error"} shadow-lg`}>
+                <div className="flex items-center gap-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="stroke-current flex-shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                 </svg>
+                  <span className="text-sm">{toast.text}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+      )}
+
+
       <section className="grid md:grid-cols-3 gap-8 items-start">
         <div className="md:col-span-1">
           <img
-            src={app.image}
+            src={app.image || placeholder}
             alt={app.title}
             className="w-full h-auto object-contain rounded-xl bg-white shadow-sm"
             onError={(e) => {
-              e.currentTarget.src = "https://placehold.co/600x400?text=App+Image";
+              e.currentTarget.onerror = null;
+              e.currentTarget.src = placeholder;
             }}
           />
         </div>
@@ -74,7 +101,7 @@ export default function AppDetailsPage() {
           <h1 className="text-2xl md:text-3xl font-bold">{app.title}</h1>
 
           <div className="mt-3 grid grid-cols-2 sm:grid-cols-4 gap-3 text-sm">
-            <div className="p-3">
+            <div className="p-3 ">
               <FontAwesomeIcon icon={faDownload} className="text-green-400 text-4xl" />
               <div className="text-slate-500">Downloads</div>
               <div className="font-bold text-lg">
@@ -97,15 +124,21 @@ export default function AppDetailsPage() {
             </div>
           </div>
 
-          <button
-            disabled={installed}
-            onClick={handleInstall}
-            className={`mt-5 btn border-none ${
-              installed ? "btn-disabled" : "bg-[#2BD576] text-white"
-            }`}
-          >
-            {installed ? "Installed" : `Install Now (${app.size} MB)`}
-          </button>
+            {!installed ? (
+              <button
+                onClick={handleInstall}
+                className="mt-5 btn border-none bg-[#2BD576] text-white hover:bg-[#97d52b]"
+              >
+                Install Now ({app.size} MB)
+              </button>
+            ) : (
+              <button
+                onClick={handleUninstall}
+                className="mt-5 btn border-none bg-[#ff0000] text-white hover:bg-[#ff8000]"
+              >
+                Uninstall
+              </button>
+            )}
         </div>
       </section>
 

@@ -3,16 +3,15 @@ import useApplications from "./Hooks/useApplications";
 import { useNavigate } from "react-router";
 import { compact } from "./Utils/number";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faDownload, faStar } from "@fortawesome/free-solid-svg-icons";
+
 export default function TopApps(){
   const { apps, loading } = useApplications();
   const nav = useNavigate();
   const list = apps.slice(0, 8);
 
-  if (loading) return (
-    <section className="container-default py-16 text-center text-slate-500">
-      Loading apps…
-    </section>
-  );
+ 
 
   return (
     <section className="container-default py-16">
@@ -26,7 +25,7 @@ export default function TopApps(){
           <button
             key={app.id}
             onClick={() => nav(`/apps/${app.id}`)}
-            className="text-left border rounded-xl bg-white shadow-sm hover:shadow-md transition p-4"
+            className="text-left border-none rounded-xl bg-white shadow-sm hover:shadow-md transition p-4 hover:scale-105 transition-all duration-200 shadow-xl"
           >
             <img src={app.image} alt={app.title}
                  className="h-32 w-full object-contain mb-3" />
@@ -34,8 +33,8 @@ export default function TopApps(){
               {app.title}
             </h3>
             <div className="flex items-center justify-between text-sm text-slate-600">
-              <span>📥 {compact(app.downloads)}</span>
-              <span>⭐ {app.ratingAvg}</span>
+              <span className="bg-green-100 text-green-400 "><FontAwesomeIcon icon={faDownload} /> {compact(app.downloads)}</span>
+                            <span className="bg-yellow-100 text-yellow-400"><FontAwesomeIcon icon={faStar}  /> {app.ratingAvg}</span>
             </div>
           </button>
         ))}
