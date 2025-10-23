@@ -1,16 +1,17 @@
-# React + Vite
+App Name-  My Hero Appamedia
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+"My Hero Appamedia" is a lightweight, hero-themed media/catalog web app.  
+It loads items from a local JSON file and renders clean cards with images, titles, companies, ratings, sizes, and downloads. Great for browsing, sorting, and extending with search or details.
 
-Currently, two official plugins are available:
+ Features-
+- Browse a grid of apps with image, rating avg, reviews, and downloads  
+- View rating distribution per app (1★–5★)  
+- Fast client-side rendering and responsive layout  
+- Toast notifications for friendly feedback (optional)  
+- Easy to extend with filters/search and app detail pages
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Technologies-
+- **Frontend:** React (Vite), JavaScript (ES6+)  
+- **Styling:** Tailwind CSS + a bit of vanilla CSS where needed  
+- **State/Utils:** React Hooks (useState/useEffect)  
+- **Notifications:** React-Toastify  
